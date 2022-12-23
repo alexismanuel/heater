@@ -18,7 +18,7 @@ jobs:
           rand=$(shuf -i 1-4 -n 1)
           git config --global user.name ${GITHUB_ACTOR}
           git config --global user.email ${{ secrets.USER_EMAIL }}
-          for (( i=0; c!=rand; i++ ))
+          for (( i=0; c!=$rand; i++ ))
           do 
             git commit --allow-empty -m ":art:"
           done
