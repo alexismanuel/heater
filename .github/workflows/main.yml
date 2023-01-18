@@ -15,7 +15,7 @@ jobs:
 
       - name: Run commit script
         run: |
-          nb=[1, 56, 112]
+          nb=(1 56 112)
           rand=${list[$RANDOM % ${#nb[@]} ]}
           git config --global user.name ${GITHUB_ACTOR}
           git config --global user.email ${{ secrets.USER_EMAIL }}
